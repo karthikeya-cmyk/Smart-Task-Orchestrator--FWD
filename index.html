@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartTask Orchestrator & Priority Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div class="app-container">
+    <header>
+        <div class="header-content">
+            <h1>SmartTask Orchestrator & Priority Scheduler</h1>
+            <p id="ect-display">Total Workload: 0 mins</p>
+        </div>
+        <button id="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="app-progress" style="width: 0%"></div>
+    </div>
+
+    <section class="input-card">
+        <div class="input-row">
+            <input type="text" id="taskName" placeholder="What needs to be done?">
+            <input type="number" id="duration" placeholder="Mins" min="1">
+        </div>
+        <div class="input-row">
+            <select id="taskPrio">
+                <option value="1">🚨 Critical (Due Today)</option>
+                <option value="3">📅 Planned (This Week)</option>
+                <option value="5">📝 Ongoing (No Deadline)</option>
+            </select>
+            <select id="category">
+                <option value="Work">💻 Work</option>
+                <option value="Personal">🏠 Personal</option>
+                <option value="Study">📚 Study</option>
+            </select>
+            <button onclick="addTask()" class="btn-main">Add Task</button>
+        </div>
+    </section>
+
+    <main class="kanban-board">
+        <div class="column">
+            <div class="col-header">
+                <h2>Upcoming Queue</h2>
+                <button onclick="processTask()" class="btn-action">Process Next <i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div id="queueDisplay" class="task-list"></div>
+        </div>
+
+        <div class="column">
+            <div class="col-header">
+                <h2>Recent History</h2>
+                <button onclick="undo()" class="btn-undo">Restore <i class="fas fa-undo"></i></button>
+            </div>
+            <div id="historyDisplay" class="task-list history-view"></div>
+        </div>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
