@@ -18,6 +18,4 @@ A responsive, client-side task management dashboard built to visualize workload 
 * `style.css` - Theming and layout logic.
 * `script.js` - Interactive functionality and data handling.
 
-## 📖 How to Run
-1. Clone the repository.
-2. Open `index.html` in any modern web browser.
+
