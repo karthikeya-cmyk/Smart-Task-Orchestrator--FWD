@@ -1,4 +1,4 @@
-# SmartTask Orchestrator (FWD Edition)
+# SmartTask Orchestrator & Priority Scheduler (FWD Edition)
 
 A responsive, client-side task management dashboard built to visualize workload urgency and optimize personal productivity.
 
